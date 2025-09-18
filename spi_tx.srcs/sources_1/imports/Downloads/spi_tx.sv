@@ -16,7 +16,7 @@ module spi_tx
         );
 
     logic [DATA_WIDTH-1:0] new_data; // to hold new data after trigger
-    logic [3:0] bit_counter; // to keep track of where we are in transmission
+    logic [$clog2(DATA_WIDTH):0] bit_counter; // to keep track of where we are in transmission
     logic [7:0] dclk_counter; // to keep track of dclk
 
     initial begin
